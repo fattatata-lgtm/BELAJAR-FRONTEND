@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Accessibility</title>
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main">Langsung ke Konten</a>
+
+    <!-- Navigasi -->
+    <nav aria-label="Menu Utama">
+        <a href="#">Beranda</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <!-- Tombol Menu -->
+    <button aria-expanded="false" aria-controls="menu">
+        Menu
+    </button>
+
+    <div id="menu">
+        <p>Daftar Menu</p>
+    </div>
+
+    <!-- Gambar -->
+    <img src="../assets/panutan.png" alt="panutan">
+
+    <!-- Form -->
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" aria-required="true">
+    </form>
+
+    <!-- Konten Utama -->
+    <main id="main">
+        <h2>Konten Utama</h2>
+        <p>Ini adalah isi halaman website.</p>
+    </main>
+
+</body>
+</html>
