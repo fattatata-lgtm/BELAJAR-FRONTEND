@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Formulir</title>
+  </head>
+  <body>
+    <h1>Form Pendaftaran</h1>
+
+    <form action="/submit" method="POST">
+      <fieldset>
+        <legend>Data Pribadi</legend>
+
+        <label for="nama">Nama</label><br />
+        <input type="text" id="nama" name="nama" required />
+
+        <br /><br />
+
+        <label for="kota">Kota</label><br />
+
+        <select id="kota" name="kota">
+          <option value="">Pilih Kota</option>
+          <option value="jkt">Jakarta</option>
+          <option value="bdg">Bandung</option>
+          <option value="sby">Surabaya</option>
+        </select>
+
+        <br /><br />
+
+        <label>Jenis Kelamin</label><br />
+
+        <input type="radio" name="gender" value="pria" /> Pria
+
+        <input type="radio" name="gender" value="wanita" /> Wanita
+
+        <br /><br />
+
+        <label>Hobi</label><br />
+
+        <input type="checkbox" name="hobi" value="membaca" /> Membaca
+
+        <input type="checkbox" name="hobi" value="musik" /> Musik
+
+        <input type="checkbox" name="hobi" value="olahraga" /> Olahraga
+
+        <br /><br />
+
+        <label for="pesan">Pesan</label><br />
+
+        <textarea
+          id="pesan"
+          name="pesan"
+          rows="5"
+          cols="40"
+          placeholder="Tulis pesan di sini..."
+        >
+        </textarea>
+
+        <br /><br />
+
+        <button type="submit">Kirim</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
