@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+
+    <style>
+      /* =========================
+           CSS VARIABLES
+        ========================== */
+
+      :root {
+        --primary: #6c63ff;
+
+        --secondary: #3f3d56;
+
+        --accent: #ff6584;
+
+        --font-main: Arial, sans-serif;
+
+        --spacing: 20px;
+
+        --radius: 12px;
+
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-main);
+
+        background: #f4f4f4;
+
+        padding: 30px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+
+        color: var(--secondary);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+
+        color: var(--secondary);
+      }
+
+      section {
+        background: white;
+
+        padding: 25px;
+
+        margin-bottom: 30px;
+
+        border-radius: var(--radius);
+
+        box-shadow: var(--shadow);
+      }
+
+      /* =========================
+           BUTTON
+        ========================== */
+
+      .button {
+        background: var(--primary);
+
+        color: white;
+
+        padding: var(--spacing);
+
+        border: none;
+
+        border-radius: var(--radius);
+
+        box-shadow: var(--shadow);
+
+        cursor: pointer;
+
+        font-size: 16px;
+      }
+
+      .button:hover {
+        background: var(--accent);
+      }
+
+      /* =========================
+           CARD
+        ========================== */
+
+      .card {
+        margin-top: 20px;
+
+        padding: var(--spacing);
+
+        border-radius: var(--radius);
+
+        box-shadow: var(--shadow);
+
+        border-left: 6px solid var(--primary);
+      }
+
+      /* =========================
+           FALLBACK
+        ========================== */
+
+      .fallback {
+        margin-top: 20px;
+
+        color: var(--text-color, black);
+
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Variables</h1>
+
+    <section>
+      <h2>1. Menggunakan CSS Variables</h2>
+
+      <button class="button">Tombol Utama</button>
+
+      <div class="card">
+        <h3>Kartu Informasi</h3>
+
+        <p>Warna, radius, shadow, dan spacing menggunakan variabel CSS.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Fallback Value</h2>
+
+      <p class="fallback">
+        Warna teks menggunakan fallback karena
+        <strong>--text-color</strong> belum didefinisikan.
+      </p>
+    </section>
+  </body>
+</html>

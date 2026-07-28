@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Patterns</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      section {
+        background: white;
+
+        margin: 25px;
+
+        padding: 20px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           NAVBAR
+        ========================== */
+
+      .navbar {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 1rem 2rem;
+
+        background: #6c63ff;
+
+        color: white;
+      }
+
+      .menu {
+        display: flex;
+
+        gap: 20px;
+      }
+
+      .menu a {
+        text-decoration: none;
+
+        color: white;
+      }
+
+      /* =========================
+           PERFECT CENTER
+        ========================== */
+
+      .center {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        min-height: 300px;
+
+        background: #e3f2fd;
+
+        border-radius: 10px;
+      }
+
+      .center-box {
+        background: #2196f3;
+
+        color: white;
+
+        padding: 30px 40px;
+
+        border-radius: 8px;
+      }
+
+      /* =========================
+           CARD GRID
+        ========================== */
+
+      .card-grid {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+      }
+
+      .card {
+        flex: 1 1 300px;
+
+        max-width: 400px;
+
+        background: #fafafa;
+
+        border: 1px solid #ddd;
+
+        border-radius: 10px;
+
+        padding: 20px;
+      }
+
+      /* =========================
+           HOLY GRAIL LAYOUT
+        ========================== */
+
+      .layout {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 500px;
+
+        border: 1px solid #ccc;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+      }
+
+      .header {
+        background: #6c63ff;
+
+        color: white;
+
+        padding: 20px;
+
+        text-align: center;
+      }
+
+      .main-content {
+        flex: 1;
+
+        display: flex;
+      }
+
+      .sidebar {
+        width: 200px;
+
+        background: #eeeeee;
+
+        padding: 20px;
+      }
+
+      .content {
+        flex: 1;
+
+        padding: 20px;
+
+        background: white;
+      }
+
+      .footer {
+        background: #333;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <h1>My Website</h1>
+
+      <div class="menu">
+        <a href="#">Home</a>
+
+        <a href="#">About</a>
+
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <section>
+      <h2>1. Perfect Center</h2>
+
+      <div class="center">
+        <div class="center-box">Konten Berada di Tengah</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Card Grid</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Contoh card menggunakan Flexbox.</p>
+        </div>
+
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Ukuran card akan menyesuaikan ruang.</p>
+        </div>
+
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Card otomatis pindah baris jika layar kecil.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Holy Grail Layout</h2>
+
+      <div class="layout">
+        <header class="header">Header</header>
+
+        <div class="main-content">
+          <aside class="sidebar">Sidebar</aside>
+
+          <main class="content">Area Konten Utama</main>
+        </div>
+
+        <footer class="footer">Footer</footer>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float & Clear</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 20px;
+
+        margin-bottom: 30px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           FLOAT
+        ========================== */
+
+      .image {
+        float: left;
+
+        width: 200px;
+
+        margin: 0 20px 20px 0;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           CLEARFIX
+        ========================== */
+
+      .clearfix::after {
+        content: "";
+
+        display: table;
+
+        clear: both;
+      }
+
+      /* =========================
+           MULTI COLUMN
+        ========================== */
+
+      .article {
+        columns: 3;
+
+        column-gap: 2rem;
+
+        column-rule: 1px solid #ddd;
+
+        text-align: justify;
+
+        line-height: 1.7;
+      }
+
+      /* =========================
+           RESPONSIVE
+        ========================== */
+
+      @media (max-width: 768px) {
+        .article {
+          columns: 1;
+        }
+
+        .image {
+          float: none;
+
+          display: block;
+
+          margin: 0 auto 20px;
+
+          width: 100%;
+
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Float & Clear</h1>
+
+    <section class="clearfix">
+      <h2>1. Float</h2>
+
+      <img
+        class="image"
+        src="https://picsum.photos/300/200"
+        alt="Contoh gambar"
+      />
+
+      <p>
+        Properti <strong>float</strong> digunakan untuk membuat elemen seperti
+        gambar berada di sisi kiri atau kanan sehingga teks dapat mengalir
+        mengelilinginya.
+      </p>
+
+      <p>
+        Sebelum Flexbox dan Grid populer, float sering digunakan untuk membuat
+        layout website. Saat ini float lebih sering digunakan untuk mengatur
+        posisi gambar di dalam artikel.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Multi-column Layout</h2>
+
+      <div class="article">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+        voluptas fugit, dignissimos natus fugiat molestias inventore impedit
+        quidem beatae. Perspiciatis assumenda rerum asperiores nesciunt nihil,
+        facere quisquam molestiae consectetur illum. Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Veritatis deserunt possimus quaerat,
+        deleniti expedita consequuntur pariatur dolorum dicta, laborum maxime,
+        eligendi ipsum porro. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Tempora, recusandae. Cumque, voluptates unde. Commodi
+        doloremque adipisci autem temporibus perspiciatis.
+      </div>
+    </section>
+  </body>
+</html>

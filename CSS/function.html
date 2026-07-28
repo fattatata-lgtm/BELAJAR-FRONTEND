@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Functions</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 30px;
+
+        line-height: 1.6;
+
+        max-width: 1000px;
+
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 25px;
+
+        margin-bottom: 30px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           calc()
+        ========================== */
+
+      .calc-box {
+        width: calc(100% - 40px);
+
+        height: 100px;
+
+        margin: auto;
+
+        background: #6c63ff;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           clamp()
+        ========================== */
+
+      .clamp-text {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+
+        color: #3f3d56;
+
+        font-weight: bold;
+      }
+
+      /* =========================
+           min()
+        ========================== */
+
+      .min-box {
+        width: min(100%, 800px);
+
+        margin: 20px auto;
+
+        padding: 20px;
+
+        background: #4caf50;
+
+        color: white;
+
+        border-radius: 10px;
+
+        text-align: center;
+      }
+
+      /* =========================
+           max()
+        ========================== */
+
+      .max-box {
+        padding: max(1rem, 5vw);
+
+        background: #ff9800;
+
+        color: white;
+
+        border-radius: 10px;
+
+        text-align: center;
+      }
+
+      /* =========================
+           attr()
+        ========================== */
+
+      .label {
+        position: relative;
+
+        display: inline-block;
+
+        padding: 20px;
+
+        border: 2px solid #6c63ff;
+
+        border-radius: 10px;
+
+        margin-top: 20px;
+      }
+
+      .label::before {
+        content: attr(data-label);
+
+        display: block;
+
+        font-weight: bold;
+
+        color: #6c63ff;
+
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Functions</h1>
+
+    <section>
+      <h2>1. calc()</h2>
+
+      <div class="calc-box">Width: calc(100% - 40px)</div>
+    </section>
+
+    <section>
+      <h2>2. clamp()</h2>
+
+      <p class="clamp-text">Ukuran teks akan menyesuaikan ukuran layar.</p>
+    </section>
+
+    <section>
+      <h2>3. min()</h2>
+
+      <div class="min-box">Width: min(100%, 800px)</div>
+    </section>
+
+    <section>
+      <h2>4. max()</h2>
+
+      <div class="max-box">Padding menggunakan max(1rem, 5vw)</div>
+    </section>
+
+    <section>
+      <h2>5. attr()</h2>
+
+      <div class="label" data-label="Label dari Attribute">
+        Nilai di atas berasal dari atribut <strong>data-label</strong>.
+      </div>
+    </section>
+  </body>
+</html>

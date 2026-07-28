@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-Index & Stacking</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 20px;
+
+        margin-bottom: 30px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           CONTAINER
+        ========================== */
+
+      .container {
+        position: relative;
+
+        width: 100%;
+
+        max-width: 700px;
+
+        height: 300px;
+
+        margin: auto;
+
+        border: 2px dashed #ccc;
+
+        background: #fafafa;
+      }
+
+      /* =========================
+           TOOLTIP
+        ========================== */
+
+      .tooltip {
+        position: absolute;
+
+        top: 40px;
+
+        left: 40px;
+
+        width: 180px;
+
+        height: 100px;
+
+        background: #4caf50;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 10px;
+
+        z-index: 50;
+      }
+
+      /* =========================
+           DROPDOWN
+        ========================== */
+
+      .dropdown {
+        position: absolute;
+
+        top: 80px;
+
+        left: 120px;
+
+        width: 220px;
+
+        height: 120px;
+
+        background: #ff9800;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 10px;
+
+        z-index: 100;
+      }
+
+      /* =========================
+           MODAL
+        ========================== */
+
+      .modal {
+        position: absolute;
+
+        top: 120px;
+
+        left: 220px;
+
+        width: 250px;
+
+        height: 140px;
+
+        background: #6c63ff;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 10px;
+
+        z-index: 1000;
+
+        font-size: 20px;
+
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Z-Index & Stacking</h1>
+
+    <section>
+      <h2>Contoh Z-Index</h2>
+
+      <div class="container">
+        <div class="tooltip">
+          Tooltip<br />
+          z-index: 50
+        </div>
+
+        <div class="dropdown">
+          Dropdown<br />
+          z-index: 100
+        </div>
+
+        <div class="modal">
+          Modal<br />
+          z-index: 1000
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

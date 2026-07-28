@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin: 30px 0 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 20px;
+
+        margin-bottom: 30px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           GRID DASAR
+        ========================== */
+
+      .grid-container {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-rows: auto;
+
+        gap: 20px;
+      }
+
+      .grid-item {
+        background: #6c63ff;
+
+        color: white;
+
+        padding: 30px;
+
+        text-align: center;
+
+        border-radius: 8px;
+      }
+
+      /* =========================
+           GRID UKURAN BERBEDA
+        ========================== */
+
+      .grid-custom {
+        display: grid;
+
+        grid-template-columns: 200px 1fr 2fr;
+
+        gap: 20px;
+      }
+
+      .custom-item {
+        background: #4caf50;
+
+        color: white;
+
+        padding: 30px;
+
+        text-align: center;
+
+        border-radius: 8px;
+      }
+
+      /* =========================
+           AUTO FILL
+        ========================== */
+
+      .grid-auto {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        gap: 20px;
+      }
+
+      .auto-item {
+        background: #ff9800;
+
+        color: white;
+
+        padding: 30px;
+
+        text-align: center;
+
+        border-radius: 8px;
+      }
+
+      /* =========================
+           GRID ITEM SPAN
+        ========================== */
+
+      .grid-span {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+      }
+
+      .span-item {
+        background: #2196f3;
+
+        color: white;
+
+        padding: 30px;
+
+        text-align: center;
+
+        border-radius: 8px;
+      }
+
+      .span-two {
+        grid-column: span 2;
+
+        background: #e91e63;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid</h1>
+
+    <section>
+      <h2>1. Grid Dasar</h2>
+
+      <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Kolom Berbeda Ukuran</h2>
+
+      <div class="grid-custom">
+        <div class="custom-item">200px</div>
+        <div class="custom-item">1fr</div>
+        <div class="custom-item">2fr</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Auto Fill</h2>
+
+      <div class="grid-auto">
+        <div class="auto-item">Card 1</div>
+        <div class="auto-item">Card 2</div>
+        <div class="auto-item">Card 3</div>
+        <div class="auto-item">Card 4</div>
+        <div class="auto-item">Card 5</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Grid Item Span</h2>
+
+      <div class="grid-span">
+        <div class="span-item span-two">Span 2 Kolom</div>
+
+        <div class="span-item">Item 2</div>
+
+        <div class="span-item">Item 3</div>
+
+        <div class="span-item">Item 4</div>
+
+        <div class="span-item">Item 5</div>
+      </div>
+    </section>
+  </body>
+</html>

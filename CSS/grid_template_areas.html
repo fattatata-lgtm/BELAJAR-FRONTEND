@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Template Areas</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      /* =========================
+           GRID TEMPLATE AREAS
+        ========================== */
+
+      .page {
+        display: grid;
+
+        grid-template-areas:
+          "header header header"
+          "sidebar main aside"
+          "footer footer footer";
+
+        grid-template-columns: 200px 1fr 200px;
+
+        grid-template-rows: auto 1fr auto;
+
+        min-height: 80vh;
+
+        gap: 15px;
+      }
+
+      /* =========================
+           GRID AREAS
+        ========================== */
+
+      .header {
+        grid-area: header;
+
+        background: #6c63ff;
+
+        color: white;
+
+        padding: 20px;
+
+        text-align: center;
+
+        border-radius: 10px;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+
+        background: #4caf50;
+
+        color: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+      }
+
+      .main {
+        grid-area: main;
+
+        background: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+
+        border: 1px solid #ddd;
+      }
+
+      .aside {
+        grid-area: aside;
+
+        background: #ff9800;
+
+        color: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+      }
+
+      .footer {
+        grid-area: footer;
+
+        background: #333;
+
+        color: white;
+
+        padding: 20px;
+
+        text-align: center;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           RESPONSIVE
+        ========================== */
+
+      @media (max-width: 768px) {
+        .page {
+          grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "aside"
+            "footer";
+
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Template Areas</h1>
+
+    <div class="page">
+      <header class="header">Header</header>
+
+      <aside class="sidebar">Sidebar</aside>
+
+      <main class="main">
+        <h2>Konten Utama</h2>
+
+        <p>Area ini merupakan isi utama halaman.</p>
+      </main>
+
+      <aside class="aside">Aside</aside>
+
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>
