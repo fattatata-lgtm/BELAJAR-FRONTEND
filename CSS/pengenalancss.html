@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan CSS - Hari 21</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS */
+        h2 {
+            color: green;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .internal-box {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #d4edda;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        /* External CSS (biasanya berada di style.css) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        .card {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: crimson;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Modul CSS Dasar - Hari 21</h1>
+
+    <hr>
+
+    <!-- Inline CSS -->
+    <h2>1. Inline CSS</h2>
+
+    <p style="color: blue; font-size: 20px; text-align:center;">
+        Paragraf ini menggunakan Inline CSS.
+    </p>
+
+
+    <hr>
+
+
+    <!-- Internal CSS -->
+    <h2>2. Internal CSS</h2>
+
+    <div class="internal-box">
+        Kotak ini menggunakan Internal CSS.
+        <br>
+        CSS ditulis langsung di dalam tag &lt;style&gt;.
+    </div>
+
+
+    <hr>
+
+
+    <!-- External CSS -->
+    <h2>3. External CSS</h2>
+
+    <div class="card">
+
+        <h3>Belajar CSS</h3>
+
+        <p>
+            Kotak ini menggunakan konsep External CSS.
+            Biasanya kode CSS dipisahkan ke file style.css.
+        </p>
+
+        <button>
+            Tombol CSS
+        </button>
+
+    </div>
+
+
+</body>
+</html>
