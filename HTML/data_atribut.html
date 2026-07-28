@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Menyimpan data custom -->
+    <div data-user-id="123" data-role="admin">User Admin</div>
+
+    <button data-action="delete" data-id="42">Hapus</button>
+
+    <!-- Di JavaScript -->
+    <script>
+      const el = document.querySelector("[data-user-id]");
+      const userId = el.dataset.userId; // "123"
+      
+    </script>   
+  </body>
+</html>
