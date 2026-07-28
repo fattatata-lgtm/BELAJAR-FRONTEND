@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows & Borders</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin: 30px 0 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 20px;
+
+        margin-bottom: 25px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           BOX SHADOW
+        ========================== */
+
+      .shadow-box {
+        width: 300px;
+
+        padding: 20px;
+
+        margin: auto;
+
+        background: white;
+
+        text-align: center;
+
+        border-radius: 12px;
+
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           MULTIPLE SHADOW
+        ========================== */
+
+      .multi-shadow {
+        width: 300px;
+
+        padding: 20px;
+
+        margin: auto;
+
+        background: white;
+
+        text-align: center;
+
+        border-radius: 12px;
+
+        box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.1),
+          0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      /* =========================
+           TEXT SHADOW
+        ========================== */
+
+      .text-shadow {
+        font-size: 32px;
+
+        text-align: center;
+
+        color: #6c63ff;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      /* =========================
+           BORDER RADIUS
+        ========================== */
+
+      .radius-box {
+        width: 220px;
+
+        height: 120px;
+
+        margin: 20px auto;
+
+        background: #6c63ff;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 12px;
+      }
+
+      .circle {
+        width: 150px;
+
+        height: 150px;
+
+        margin: 20px auto;
+
+        background: tomato;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 50%;
+      }
+
+      .custom-radius {
+        width: 220px;
+
+        height: 120px;
+
+        margin: 20px auto;
+
+        background: seagreen;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        border-radius: 12px 0 12px 0;
+      }
+
+      /* =========================
+           BORDER
+        ========================== */
+
+      .border-box {
+        width: 300px;
+
+        padding: 20px;
+
+        margin: auto;
+
+        border: 2px solid #6c63ff;
+
+        border-bottom: 5px solid #ff9800;
+
+        text-align: center;
+
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Shadows & Borders</h1>
+
+    <section>
+      <h2>1. Box Shadow</h2>
+
+      <div class="shadow-box">Box Shadow</div>
+    </section>
+
+    <section>
+      <h2>2. Multiple Box Shadow</h2>
+
+      <div class="multi-shadow">Multiple Shadow</div>
+    </section>
+
+    <section>
+      <h2>3. Text Shadow</h2>
+
+      <h3 class="text-shadow">CSS Shadow</h3>
+    </section>
+
+    <section>
+      <h2>4. Border Radius</h2>
+
+      <div class="radius-box">Radius 12px</div>
+
+      <div class="circle">Circle</div>
+
+      <div class="custom-radius">Custom Radius</div>
+    </section>
+
+    <section>
+      <h2>5. Border</h2>
+
+      <div class="border-box">Border Solid dan Border Bottom</div>
+    </section>
+  </body>
+</html>

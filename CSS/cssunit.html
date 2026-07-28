@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari 28 - CSS Units</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin: 30px 0 15px;
+      }
+
+      section {
+        background: white;
+
+        padding: 20px;
+
+        margin-bottom: 25px;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* =========================
+           PX
+        ========================== */
+
+      .px-box {
+        width: 200px;
+
+        height: 100px;
+
+        background: #6c63ff;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+      }
+
+      /* =========================
+           PERCENT
+        ========================== */
+
+      .parent {
+        width: 100%;
+
+        background: #ddd;
+
+        padding: 10px;
+      }
+
+      .percent-box {
+        width: 50%;
+
+        height: 80px;
+
+        background: #28a745;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+      }
+
+      /* =========================
+           EM
+        ========================== */
+
+      .em-parent {
+        font-size: 20px;
+      }
+
+      .em-text {
+        font-size: 1.5em;
+      }
+
+      /* =========================
+           REM
+        ========================== */
+
+      .rem-text {
+        font-size: 1.5rem;
+      }
+
+      /* =========================
+           VW
+        ========================== */
+
+      .vw-box {
+        width: 50vw;
+
+        background: #ff9800;
+
+        color: white;
+
+        padding: 20px;
+
+        text-align: center;
+      }
+
+      /* =========================
+           VH
+        ========================== */
+
+      .vh-box {
+        height: 30vh;
+
+        background: #00bcd4;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+      }
+
+      /* =========================
+           VMIN
+        ========================== */
+
+      .vmin-box {
+        width: 30vmin;
+
+        height: 30vmin;
+
+        background: #e91e63;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Units</h1>
+
+    <section>
+      <h2>1. Pixel (px)</h2>
+
+      <div class="px-box">Width: 200px</div>
+    </section>
+
+    <section>
+      <h2>2. Persen (%)</h2>
+
+      <div class="parent">
+        <div class="percent-box">Width: 50%</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. EM</h2>
+
+      <div class="em-parent">
+        Parent font-size = 20px
+
+        <p class="em-text">Font-size: 1.5em</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. REM</h2>
+
+      <p class="rem-text">Font-size: 1.5rem</p>
+    </section>
+
+    <section>
+      <h2>5. Viewport Width (vw)</h2>
+
+      <div class="vw-box">Lebar 50vw</div>
+    </section>
+
+    <section>
+      <h2>6. Viewport Height (vh)</h2>
+
+      <div class="vh-box">Tinggi 30vh</div>
+    </section>
+
+    <section>
+      <h2>7. Viewport Minimum (vmin)</h2>
+
+      <div class="vmin-box">30vmin</div>
+    </section>
+  </body>
+</html>

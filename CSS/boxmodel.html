@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hari 25 - CSS Box Model</title>
+
+    <style>
+      /* =========================
+           RESET BOX SIZING
+        ========================== */
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      /* =========================
+           BOX MODEL
+        ========================== */
+
+      .box {
+        /* Content */
+
+        width: 300px;
+
+        height: 200px;
+
+        /* Padding */
+
+        padding: 20px;
+
+        /* Border */
+
+        border: 2px solid #6c63ff;
+
+        border-radius: 12px;
+
+        /* Margin */
+
+        margin: 20px auto;
+
+        background-color: white;
+
+        text-align: center;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+      }
+
+      /* Padding berbeda */
+
+      .padding-example {
+        width: 300px;
+
+        height: 150px;
+
+        padding: 10px 20px 30px 40px;
+
+        border: 3px solid crimson;
+
+        margin: 20px auto;
+
+        background-color: #ffe5e5;
+      }
+
+      /* Border Example */
+
+      .border-example {
+        width: 300px;
+
+        height: 150px;
+
+        border: 5px dashed green;
+
+        border-radius: 20px;
+
+        margin: 20px auto;
+
+        background-color: white;
+
+        text-align: center;
+
+        padding: 20px;
+      }
+
+      /* Margin Example */
+
+      .margin-example {
+        width: 300px;
+
+        height: 100px;
+
+        background-color: skyblue;
+
+        margin: 40px auto;
+
+        padding: 20px;
+
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Box Model</h1>
+
+    <div class="box">Content + Padding + Border + Margin</div>
+
+    <div class="padding-example">
+      Contoh Padding:
+      <br />
+      Jarak antara content dan border
+    </div>
+
+    <div class="border-example">
+      Contoh Border:
+      <br />
+      Garis pembatas elemen
+    </div>
+
+    <div class="margin-example">
+      Contoh Margin:
+      <br />
+      Jarak luar elemen
+    </div>
+  </body>
+</html>

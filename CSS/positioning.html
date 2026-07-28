@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari 27 - CSS Positioning</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding-top: 80px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin: 30px 20px 10px;
+      }
+
+      p {
+        margin: 0 20px 15px;
+      }
+
+      /* =========================
+           STATIC
+        ========================== */
+
+      .static {
+        position: static;
+
+        background: #87ceeb;
+
+        padding: 20px;
+
+        margin: 20px;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           RELATIVE
+        ========================== */
+
+      .relative {
+        position: relative;
+
+        top: 10px;
+
+        left: 20px;
+
+        background: #98fb98;
+
+        padding: 20px;
+
+        margin: 20px;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           ABSOLUTE
+        ========================== */
+
+      .parent {
+        position: relative;
+
+        width: 350px;
+
+        height: 180px;
+
+        background: white;
+
+        border: 2px solid #6c63ff;
+
+        margin: 20px;
+
+        border-radius: 10px;
+      }
+
+      .absolute {
+        position: absolute;
+
+        top: 10px;
+
+        right: 10px;
+
+        background: crimson;
+
+        color: white;
+
+        padding: 10px;
+
+        border-radius: 6px;
+      }
+
+      /* =========================
+           FIXED
+        ========================== */
+
+      .navbar {
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #222;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 20px;
+
+        z-index: 100;
+      }
+
+      /* =========================
+           STICKY
+        ========================== */
+
+      .sticky {
+        position: sticky;
+
+        top: 70px;
+
+        background: orange;
+
+        padding: 15px;
+
+        margin: 20px;
+
+        border-radius: 8px;
+      }
+
+      /* =========================
+           KONTEN
+        ========================== */
+
+      .content {
+        margin: 20px;
+
+        background: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed -->
+    <div class="navbar">Navbar (Position: Fixed)</div>
+
+    <h1>CSS Positioning</h1>
+
+    <hr />
+
+    <h2>1. Position Static</h2>
+
+    <div class="static">Saya menggunakan position: static (default).</div>
+
+    <hr />
+
+    <h2>2. Position Relative</h2>
+
+    <div class="relative">Saya bergeser menggunakan top dan left.</div>
+
+    <hr />
+
+    <h2>3. Position Absolute</h2>
+
+    <div class="parent">
+      Parent (position: relative)
+
+      <div class="absolute">Absolute</div>
+    </div>
+
+    <hr />
+
+    <h2>4. Position Sticky</h2>
+
+    <div class="sticky">Saya akan tetap di atas saat halaman di-scroll.</div>
+
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Scroll ke bawah untuk melihat efek sticky.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </body>
+</html>

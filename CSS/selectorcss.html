@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari 22 - CSS Selectors</title>
+
+    <style>
+      /* =========================
+           Element Selector
+        ========================== */
+      p {
+        color: gray;
+        font-size: 18px;
+      }
+
+      /* =========================
+           Class Selector
+        ========================== */
+      .card {
+        padding: 20px;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        margin: 20px;
+      }
+
+      /* =========================
+           ID Selector
+        ========================== */
+      #header {
+        background: navy;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* =========================
+           Descendant Selector
+        ========================== */
+      nav a {
+        text-decoration: none;
+        color: blue;
+        margin: 10px;
+      }
+
+      /* =========================
+           Child Selector
+        ========================== */
+      ul > li {
+        list-style: none;
+        padding: 5px;
+      }
+
+      /* =========================
+           Pseudo-class
+        ========================== */
+
+      /* Saat mouse diarahkan */
+      a:hover {
+        color: red;
+      }
+
+      /* Elemen pertama */
+      li:first-child {
+        font-weight: bold;
+      }
+
+      /* Saat input aktif */
+      input:focus {
+        border: 2px solid blue;
+        outline: none;
+      }
+
+      /* Paragraf ganjil */
+      .list p:nth-child(odd) {
+        background: #f0f0f0;
+      }
+
+      /* =========================
+           Pseudo-element
+        ========================== */
+
+      /* Huruf pertama */
+      .judul::first-letter {
+        font-size: 2em;
+        color: crimson;
+      }
+
+      /* Menambahkan teks sebelum paragraf */
+      .before::before {
+        content: "→ ";
+        color: green;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ID Selector -->
+    <header id="header">
+      <h1>Belajar CSS Selectors</h1>
+    </header>
+
+    <hr />
+
+    <!-- Descendant Selector -->
+    <h2>1. Descendant Selector</h2>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Profil</a>
+      <a href="#">Kontak</a>
+    </nav>
+
+    <hr />
+
+    <!-- Class Selector -->
+    <h2>2. Class Selector</h2>
+
+    <div class="card">
+      <h3 class="judul">CSS Selector</h3>
+
+      <p>Ini menggunakan Element Selector karena semua tag p terkena CSS.</p>
+
+      <p class="before">Ini menggunakan Pseudo-element ::before.</p>
+    </div>
+
+    <hr />
+
+    <!-- Child Selector -->
+    <h2>3. Child Selector</h2>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <hr />
+
+    <!-- Pseudo Class -->
+    <h2>4. Pseudo-class</h2>
+
+    <div class="list">
+      <p>Paragraf pertama</p>
+
+      <p>Paragraf kedua</p>
+
+      <p>Paragraf ketiga</p>
+    </div>
+
+    <hr />
+
+    <!-- Input Focus -->
+    <h2>5. Input Focus</h2>
+
+    <input type="text" placeholder="Klik input ini" />
+  </body>
+</html>

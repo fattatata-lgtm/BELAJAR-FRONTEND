@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color & Backgrounds</title>
+
+    <style>
+      /* =========================
+           CSS COLORS
+        ========================== */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      /* Nama Warna */
+      .nama-warna {
+        color: red;
+      }
+
+      /* Hex Color */
+      .hex-warna {
+        color: #ff0000;
+      }
+
+      /* RGB Color */
+      .rgb-warna {
+        color: rgb(0, 128, 0);
+      }
+
+      /* RGBA Transparansi */
+      .rgba-warna {
+        color: rgba(0, 0, 255, 0.5);
+      }
+
+      /* HSL Color */
+      .hsl-warna {
+        color: hsl(300, 100%, 50%);
+      }
+
+      /* =========================
+           BACKGROUND
+        ========================== */
+
+      .background-color {
+        width: 80%;
+        height: 150px;
+
+        background-color: #1a1a2e;
+
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 20px auto;
+
+        border-radius: 10px;
+      }
+
+      /* Background Image */
+
+      .hero {
+        width: 80%;
+        height: 250px;
+
+        background-image: url("https://picsum.photos/800/400");
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 20px auto;
+
+        border-radius: 10px;
+      }
+
+      /* =========================
+           GRADIENT
+        ========================== */
+
+      .gradient {
+        width: 80%;
+        height: 150px;
+
+        background: linear-gradient(135deg, #6c63ff, #ff6584);
+
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 20px auto;
+
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 30px;
+      }
+
+      .box {
+        padding: 20px;
+
+        background-color: #f4f4f4;
+
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Colors & Backgrounds</h1>
+
+    <hr />
+
+    <h2>1. CSS Colors</h2>
+
+    <div class="box">
+      <p class="nama-warna">Ini menggunakan warna dengan nama: red</p>
+
+      <p class="hex-warna">Ini menggunakan Hex Color: #ff0000</p>
+
+      <p class="rgb-warna">Ini menggunakan RGB: rgb(0,128,0)</p>
+
+      <p class="rgba-warna">Ini menggunakan RGBA dengan transparansi</p>
+
+      <p class="hsl-warna">Ini menggunakan HSL Color</p>
+    </div>
+
+    <hr />
+
+    <h2>2. Background Color</h2>
+
+    <div class="background-color">Menggunakan background-color</div>
+
+    <hr />
+
+    <h2>3. Background Image</h2>
+
+    <div class="hero">Background menggunakan gambar</div>
+
+    <hr />
+
+    <h2>4. Gradient Background</h2>
+
+    <div class="gradient">Linear Gradient</div>
+  </body>
+</html>

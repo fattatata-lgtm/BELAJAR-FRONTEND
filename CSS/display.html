@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hari 26 - CSS Display Property</title>
+
+    <style>
+      /* =========================
+           RESET
+        ========================== */
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin: 25px 0 10px;
+      }
+
+      /* =========================
+           DISPLAY BLOCK
+        ========================== */
+
+      .block {
+        display: block;
+
+        width: 300px;
+
+        height: 80px;
+
+        background-color: lightblue;
+
+        padding: 20px;
+
+        margin-bottom: 10px;
+      }
+
+      /* =========================
+           DISPLAY INLINE
+        ========================== */
+
+      .inline {
+        display: inline;
+
+        background-color: lightgreen;
+
+        padding: 10px;
+      }
+
+      /* =========================
+           DISPLAY INLINE-BLOCK
+        ========================== */
+
+      .btn {
+        display: inline-block;
+
+        width: 150px;
+
+        height: 50px;
+
+        background-color: royalblue;
+
+        color: white;
+
+        padding: 15px;
+
+        text-align: center;
+
+        border-radius: 8px;
+
+        margin-top: 10px;
+      }
+
+      /* =========================
+           DISPLAY NONE
+        ========================== */
+
+      .hidden {
+        display: none;
+      }
+
+      /* =========================
+           DISPLAY FLEX
+        ========================== */
+
+      .flex-container {
+        display: flex;
+
+        gap: 20px;
+
+        background-color: white;
+
+        padding: 20px;
+      }
+
+      .flex-item {
+        width: 100px;
+
+        height: 100px;
+
+        background-color: orange;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+      }
+
+      /* =========================
+           DISPLAY GRID
+        ========================== */
+
+      .grid-container {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+
+        background-color: white;
+
+        padding: 20px;
+      }
+
+      .grid-item {
+        background-color: pink;
+
+        padding: 30px;
+
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Display Property</h1>
+
+    <hr />
+
+    <h2>1. Display Block</h2>
+
+    <div class="block">Saya adalah block element</div>
+
+    <div class="block">Saya berada di baris baru</div>
+
+    <hr />
+
+    <h2>2. Display Inline</h2>
+
+    <br />
+    <span class="inline"> Inline 1 </span>
+
+    <span class="inline"> Inline 2 </span>
+
+    <br /><br />
+    <p>
+      Inline mengikuti ukuran konten dan tidak bisa menggunakan width/height.
+    </p>
+
+    <hr />
+
+    <h2>3. Display Inline-block</h2>
+
+    <a href="#" class="btn"> Tombol </a>
+
+    <a href="#" class="btn"> Button 2 </a>
+
+    <hr />
+
+    <h2>4. Display None</h2>
+
+    <div class="hidden">Elemen ini tidak terlihat</div>
+
+    <p>Elemen di atas menggunakan display:none.</p>
+
+    <hr />
+
+    <h2>5. Display Flex</h2>
+
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+
+      <div class="flex-item">2</div>
+
+      <div class="flex-item">3</div>
+    </div>
+
+    <hr />
+
+    <h2>6. Display Grid</h2>
+
+    <div class="grid-container">
+      <div class="grid-item">Item 1</div>
+
+      <div class="grid-item">Item 2</div>
+
+      <div class="grid-item">Item 3</div>
+
+      <div class="grid-item">Item 4</div>
+
+      <div class="grid-item">Item 5</div>
+
+      <div class="grid-item">Item 6</div>
+    </div>
+  </body>
+</html>
